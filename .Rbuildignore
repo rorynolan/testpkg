@@ -1,3 +1,4 @@
 ^testpkg\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^\.github$
