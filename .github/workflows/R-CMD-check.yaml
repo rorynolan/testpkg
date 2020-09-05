@@ -16,6 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@master
+      - name: Install libcurl
+        run: libcurl4-openssl-dev
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
@@ -26,3 +28,4 @@ jobs:
         shell: Rscript {0}
       - name: Coverage
         run: covr::package_coverage(Ropts = "-d valgrind")
+        shell: Rscript {0}
